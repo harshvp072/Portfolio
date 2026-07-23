@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pearl-bg: #FDFBF7;
+  --color-deep-slate: #2D3748;
+  --color-pastel-blue: #B4C5E4;
+  --color-pastel-sage: #C1E1D2;
+  --color-soft-lilac: #E8D7F8;
+}
+
+/* Smooth Scrolling for the entire app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #B4C5E4;
+  border-radius: 10px;
+  border: 2px solid #FDFBF7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C1E1D2;
+}
+
+/* Custom Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
