@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
+import messageRoutes from './routes/messageRoutes.js';
 
 // Load environment variables
 dotenv.config();
@@ -20,6 +21,9 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Portfolio API is running flawlessly.' });
 });
+
+// Add this line right below your health check route:
+app.use('/api/messages', messageRoutes);
 
 // Custom Error Handling Middleware
 app.use((err, req, res, next) => {
