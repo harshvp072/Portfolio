@@ -9,7 +9,7 @@ export default function Projects() {
       icon: <BrainCircuit className="w-7 h-7 text-purple-400" />,
       borderHover: 'hover:border-purple-500/50',
       glowHover: 'group-hover:shadow-purple-500/20',
-      github: 'https://github.com/harshvp072/AskNova' // Add your AskNova repo link here!
+      github: 'https://github.com/harshvp072/AskNova' // Make sure this is a full URL, not '#'
     },
     {
       title: 'Study_Hive',
